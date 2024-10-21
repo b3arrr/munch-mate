@@ -1,0 +1,239 @@
+:root {
+    --text-color: rgb(77, 77, 77);
+    --hover-color: rgb(191, 61, 46);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    margin: 0 5%;
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+}
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header nav a {
+    font-size: 1.2rem;
+}
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    gap: 20px 80px;
+}
+#header-title {
+    flex-grow: 1;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+#line {
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 0%,
+        black 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    opacity: 0.5;
+    width: 100%;
+    height: 1px;
+    margin: 25px auto;
+    display: block;
+}
+p h1 h2 h3 h4 {
+    color: black;
+}
+
+p {
+    line-height: 2;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: var(--hover-color);
+    transition: .15s;
+}
+main {
+}
+.section-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.section-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 33%;
+    margin: 80px;
+    padding: 80px;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.section-item p {
+    text-align: center;
+}
+.section-item:hover {
+    transform: translateY(-10px) scale(1.1);
+    color: white; 
+    background-color: #2f2f2f;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    font-size: 1.3rem;
+    font-weight: 800;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+        rgba(0, 0, 0, 0.041) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+    color: #3c4043;
+    cursor: pointer;
+    font-weight: 500;
+    height: 100px;
+    justify-content: center;
+    letter-spacing: 0.25px;
+    max-width: 100%;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    width: auto;
+    margin: 30px 0px;
+}
+
+button:hover {
+    background: #f6f9fe;
+    color: #174ea6;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+
+/* about specific */
+#about-image {
+    margin: auto;
+    display: block;
+    width: 50%;
+}
+
+/* The team specific code*/
+
+.image-wrapper {
+    display:grid; 
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+}
+.image-wrapper img {
+    margin: 20px 0px;
+    padding: 20px;
+}
+/*Specific the app*/
+
+.container {
+    width: 80%;
+    align-items: center;
+    margin:auto; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px 0px;
+}
+.container img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 60%;
+    place-self: center;
+
+}
+.card {
+    background-color: #2d2d2d;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.257);
+    margin: 20px;
+    text-align: center;
+    place-self: center;
+    max-width: 45%;
+}
+
+.container h2 {
+    font-size: 2rem;
+    margin: 20px 0px;
+    color: white;
+}
+.container p {
+    color: white;
+    text-align: left;
+}
+
+/* contact specific styling */
+.contact-section {
+    width: 60%;
+    border: solid 1.5px rgba(0, 0, 0, 0.044);
+    background-color: #f3f3f3;
+    padding: 30px;
+    align-items: center;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents child elements from overflowing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    
+}
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+input {
+    display: block;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+textarea {
+    display: block;
+    padding: 10px 0px;
+    width: 100%;
+    height: 90px;
+    resize:vertical;
+}
+input[type=submit] {
+    margin: 20px auto;
+    width: 20%;
+
+}
+footer {
+    margin: 90px 0px;
+}
+footer li {
+    text-align: center;
+    list-style: none;
+}
