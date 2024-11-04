@@ -85,9 +85,7 @@ main {
     text-align: left;;
 }
 
-.section-item p {
-    font-size: 1.2rem;
-}
+
 .section-item:hover {
     transform: translateY(-10px) scale(1.1);
     color: white; 
@@ -245,4 +243,10 @@ footer li {
     justify-content: center;
 
 
+}
+
+#phone {
+    display:flex;
+    margin:100px;
+    justify-content: center;
 }
