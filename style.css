@@ -1,18 +1,44 @@
 :root {
-    --text-color: rgb(77, 77, 77);
-    --hover-color: rgb(191, 61, 46);
+    --text-color: rgb(255, 255, 255);
+    --hover-color: rgb(255, 97, 79);
+    --primary-color: rgb(2, 159, 183);
+    --secondary-color: rgb(116, 8, 8);
 }
 * {
     margin: 0;
     padding: 0;
 }
+body {
+    margin: 0;
+    overflow-x: hidden;
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+}
 html {
-    margin: 0 5%;
+    background-image: 
+        linear-gradient(
+            to bottom,
+            rgb(192, 238, 255) 5px,
+            rgba(255, 255, 255, 0) 700px
+        ),
+        linear-gradient(
+            to bottom right,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures background covers the page */
+    background-position: top; /* Aligns background to top of page */
+    background-attachment: scroll; /* Background scrolls with content */
     font-size: 16px;
     line-height: 1.6;
     font-family: "Roboto", sans-serif;
+    min-height: 100%; /* Ensures the page covers full height, even when overscrolling */
+}
+main {
+    margin: 0 5%;
 }
 .header-wrapper {
+    padding: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -21,6 +47,9 @@ html {
 header nav a {
     font-size: 1.2rem;
 }
+header {
+    margin: 0 5%;
+}
 header ul {
     display: flex;
     flex-wrap: wrap;
@@ -28,6 +57,7 @@ header ul {
     list-style: none;
     gap: 20px 80px;
 }
+
 #header-title {
     flex-grow: 1;
     font-size: 3rem;
@@ -60,15 +90,16 @@ a {
 }
 a:hover {
     color: var(--hover-color);
-    transition: .15s;
-}
-main {
+    transition: 0.15s;
 }
 .section-wrapper {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+}
+.section-wrapper img {
+    border-radius: 20px;
 }
 .section-item {
     display: flex;
@@ -82,13 +113,12 @@ main {
     padding: 80px;
     transition: 0.2s;
     box-sizing: border-box;
-    text-align: left;;
+    text-align: left;
 }
-
 
 .section-item:hover {
     transform: translateY(-10px) scale(1.1);
-    color: white; 
+    color: white;
     background-color: #2f2f2f;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 8px 30px rgba(0, 0, 0, 0.1);
 }
@@ -129,7 +159,6 @@ h1 {
     font-size: 2rem;
 }
 
-
 /* about specific */
 #about-image {
     margin: 50px auto;
@@ -140,8 +169,8 @@ h1 {
 /* The team specific code*/
 
 .image-wrapper {
-    display:grid; 
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 .image-wrapper img {
     margin: 20px 0px;
@@ -152,7 +181,7 @@ h1 {
 .container {
     width: 80%;
     align-items: center;
-    margin:auto; 
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px 0px;
@@ -163,7 +192,6 @@ h1 {
     margin: 20px;
     max-width: 550px;
     place-self: center;
-
 }
 .card {
     background-color: #2d2d2d;
@@ -193,8 +221,8 @@ h1 {
     background-color: #f3f3f3;
     padding: 30px;
     align-items: center;
-    margin:auto;
-    display:flex;
+    margin: auto;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     background-color: #ffffff;
@@ -202,7 +230,6 @@ h1 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Prevents child elements from overflowing */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-    
 }
 form {
     width: 100%;
@@ -222,31 +249,36 @@ textarea {
     padding: 10px 0px;
     width: 100%;
     height: 90px;
-    resize:vertical;
+    resize: vertical;
 }
-input[type=submit] {
+input[type="submit"] {
     margin: 20px auto;
     width: 20%;
-
 }
 footer {
-    margin: 90px 0px;
+    margin: 90px 5%;
 }
 footer li {
     text-align: center;
     list-style: none;
+}
+footer a {
+    color: var(--text-color);
 }
 
 #download {
     margin: 70px;
     display: flex;
     justify-content: center;
-
-
 }
 
 #phone {
-    display:flex;
-    margin:100px;
+    display: flex;
+    margin: 100px;
     justify-content: center;
+    color: var(--text-color);
+}
+
+footer  p {
+    color: var(--text-color);
 }
