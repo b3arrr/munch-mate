@@ -1,12 +1,12 @@
 :root {
     --text-color: rgb(255, 255, 255);
     --hover-color: rgb(255, 97, 79);
-    --primary-color: rgb(2, 159, 183);
-    --secondary-color: rgb(225, 27, 27);
+    --primary-color: rgb(0, 134, 155);
+    --secondary-color: rgb(222, 32, 32);
 }
 * {
-/*     outline: 1px solid
- */    margin: 0;
+    outline: 1px solid;
+    margin: 0;
     padding: 0;
     color: white;
 }
@@ -194,12 +194,18 @@ h1 {
 .image-wrapper {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     width: 90%;
 }
 .identity {
-    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.431);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
 }
 .identity p {
+    padding-top: 10px;
     text-align: center;
 }
 .image-wrapper img {
