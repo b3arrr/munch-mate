@@ -5,8 +5,8 @@
     --secondary-color: rgb(222, 32, 32);
 }
 * {
-    outline: 1px solid;
-    margin: 0;
+/*     outline: 1px solid;
+ */    margin: 0;
     padding: 0;
     color: white;
 }
