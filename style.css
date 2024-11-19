@@ -196,27 +196,32 @@ h1 {
 
 .image-wrapper {
     margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 3rem; /* Space between the items */
+    justify-items: center;
+    max-width: 40%;
 }
+
 .identity {
     border: 1px solid rgba(255, 255, 255, 0.431);
     border-radius: 10px;
     padding: 20px;
-    margin: 10px;
     background-color: rgba(0, 0, 0, 0.16);
+    width: auto; /* Allow the elements to have natural width */
+    margin: 0; /* Ensure margin doesn't interfere with gap */
 }
+
 .identity p {
     padding-top: 10px;
     text-align: center;
 }
+
 .image-wrapper img {
-   max-width: 200px;
-    
+    max-width: 100%; /* Ensure images fit within their grid cells */
 }
+
+
 
 
 
